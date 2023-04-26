@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">COSC-326-L2</string>
+    <string name="button_text">Settings</string>
+    <string name="title">“This MF paid for Twitter”</string>
+    <string name="body">No, I didn’t pay for Twitter.
+I paid for free speech.
+I paid for 1776 to commence again.
+I paid for the Founding Fathers’ vision.
+I paid to tell Silicon Valley to go screw itself.
+I paid to show support for a man who put himself in the line of fire for the First Amendment.
+I paid because we support our own.
+I paid because if George Washington was alive today, he’d be paying too.
+So next time you say I paid for Twitter, just realize how IGNANT (or ignorant, depending on your preference) you sound!</string>
 </resources>
