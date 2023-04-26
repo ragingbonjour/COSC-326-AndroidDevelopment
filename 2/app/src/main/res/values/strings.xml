@@ -11,4 +11,7 @@ I paid to show support for a man who put himself in the line of fire for the Fir
 I paid because we support our own.
 I paid because if George Washington was alive today, he’d be paying too.
 So next time you say I paid for Twitter, just realize how IGNANT (or ignorant, depending on your preference) you sound!</string>
+    <string name="setting_title">Settings</string>
+    <string name="dark_mode">Dark Mode Textbox</string>
+    <string name="back_button_text">Go Back</string>
 </resources>
