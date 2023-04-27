@@ -1,9 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+
+    <!-- Lay out all the elements below 'vertically' as each row will be a LinearLayout in itself -->
+
+    <!-- "Create Channel" banner at top of activity -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_channel_title"
+        android:textSize="27sp" />
+
+
+    <!-- LinearLayouts for all the text inputs so they're programmatically scaled to correct widths -->
+    <!-- ROW 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/channel_name_hint"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/channel_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:hint="@string/channel_number_hint"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <!-- ROW 2 -->
+    <EditText
+        android:id="@+id/channel_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/channel_description_hint" />
+
+    <!-- ROW 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:hint="@string/create_channel_button"
+            android:onClick="on_create_channel_click"/>
+
+        <CheckBox
+            android:id="@+id/channel_importance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/high_importance_checkbox"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <!-- SECTION 2 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/create_notification_title"
+        android:textSize="27sp" />
+
+    <!-- LinearLayouts for all the text inputs so they're programmatically scaled to correct widths -->
+    <!-- ROW 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/notification_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/notification_name_hint"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/notification_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:hint="@string/notification_channel_number_hint"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <!-- ROW 2 -->
+    <EditText
+        android:id="@+id/notification_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/notification_body_hint" />
+
+    <!-- ROW 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:hint="@string/create_notification_button"
+            android:backgroundTint="@color/material_dynamic_tertiary50"
+            android:onClick="on_create_notification_click"/>
+
+        <CheckBox
+            android:id="@+id/notification_dismiss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/autocancel_checkbox"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <!-- Buttons at bottom of page (full-width) -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/delete_last_notification_button"
+        android:onClick="on_delete_click"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="@string/run_one_shot_button"
+        android:onClick="on_oneshot_click"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unbind_service_button"
+        android:onClick="on_unbind_click"/>
+
+</LinearLayout>

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">COSC326-L5</string>
+    <string name="create_channel_title">Create Channel</string>
+    <string name="channel_name_hint">Name</string>
+    <string name="channel_number_hint">ID</string>
+    <string name="channel_description_hint">Description</string>
+    <string name="create_channel_button">Create Channel</string>
+    <string name="high_importance_checkbox">High Importance</string>
+    <string name="create_notification_title">Create Notification</string>
+    <string name="notification_name_hint">Title</string>
+    <string name="notification_channel_number_hint">Channel ID</string>
+    <string name="notification_body_hint">Message</string>
+    <string name="create_notification_button">Create Notification</string>
+    <string name="autocancel_checkbox">Autocancel</string>
+    <string name="delete_last_notification_button">DELETE LAST NOTIFICATION</string>
+    <string name="run_one_shot_button">RUN ONE-SHOT SERVICE</string>
+    <string name="unbind_service_button">UNBIND SERVICE</string>
 </resources>
