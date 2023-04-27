@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">COSC-326-L4</string>
+    <string name="button_text">UPDATE DISTANCE</string>
+    <string name="default_textview_body">Try loading an image, then hit the Update Distance button above to calculate your distance.</string>
 </resources>

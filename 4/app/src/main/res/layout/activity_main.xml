@@ -1,9 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?><!-- LinearLayout - ScrollView - TableLayout (TableRow image_id, TableRow button_id, TableRow textview_id) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+
+    android:orientation="horizontal">
+    <!-- A horizontal layout allows for elements to be placed above one another as defined ABOVE -->
+
+    <!-- Allow all elements on the screen to be scrolled across -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <!-- (ImageView image_id, Button button_id, TextView textview_id) -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_id"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/default_image" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button_id"
+                    android:text="@string/button_text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_id"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/default_textview_body"
+                    android:textSize="25sp">
+                </TextView>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
